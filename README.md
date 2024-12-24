@@ -1,6 +1,9 @@
 # nand2Tetris
-VMTranslator, Compiler and code from Coursera Nand2Tetris course
-1-3 HDL Components using NAND: RAM, ALU, Adder, Register, bit, AND, OR, etc.
+Assembler, VMTranslator, Compiler HDL and other code from Coursera Nand2Tetris course.
+
+1. HDL Components using NAND: AND, OR, multiplexors, etc.
+2. Adder, ALU, Full Adder HDL Components
+3. Bit, Register, PC, RAM
 4. Writing assembly code for HACK
 5. CPU and HACK computer implementation
 6. Assembler.js
