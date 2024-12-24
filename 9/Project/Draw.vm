@@ -1,0 +1,518 @@
+function Draw.new 0
+    push constant 1
+    call Memory.alloc 1
+    pop pointer 0
+    push argument 0
+    pop argument 0
+    push pointer 0
+    return
+function Draw.drawCross 2
+    push argument 0
+    pop pointer 0
+    push constant 70
+    push argument 1
+    push constant 1
+    sub
+    call Math.multiply 2
+    pop local 0
+    push constant 70
+    push argument 2
+    push constant 1
+    sub
+    call Math.multiply 2
+    pop local 1
+    push constant 20
+    push local 0
+    add
+    push constant 20
+    push local 1
+    add
+    push constant 90
+    push local 0
+    add
+    push constant 90
+    push local 1
+    add
+    call Screen.drawLine 4
+    pop temp 0
+    push constant 90
+    push local 0
+    add
+    push constant 20
+    push local 1
+    add
+    push constant 20
+    push local 0
+    add
+    push constant 90
+    push local 1
+    add
+    call Screen.drawLine 4
+    pop temp 0
+    push constant 0
+    return
+function Draw.drawCircle 2
+    push argument 0
+    pop pointer 0
+    push constant 70
+    push argument 1
+    push constant 1
+    sub
+    call Math.multiply 2
+    pop local 0
+    push constant 70
+    push argument 2
+    push constant 1
+    sub
+    call Math.multiply 2
+    pop local 1
+    push constant 55
+    push local 0
+    add
+    push constant 55
+    push local 1
+    add
+    push constant 35
+    call Screen.drawCircle 3
+    pop temp 0
+    push constant 0
+    return
+function Draw.dispose 0
+    push argument 0
+    pop pointer 0
+    push pointer 0
+    call Memory.deAlloc 1
+    pop temp 0
+    push constant 0
+    return
+function Draw.drawBoard 0
+    push argument 0
+    pop pointer 0
+    push constant 20
+    push constant 20
+    push constant 20
+    push constant 230
+    call Screen.drawLine 4
+    pop temp 0
+    push constant 20
+    push constant 20
+    push constant 230
+    push constant 20
+    call Screen.drawLine 4
+    pop temp 0
+    push constant 230
+    push constant 20
+    push constant 230
+    push constant 230
+    call Screen.drawLine 4
+    pop temp 0
+    push constant 20
+    push constant 230
+    push constant 230
+    push constant 230
+    call Screen.drawLine 4
+    pop temp 0
+    push constant 90
+    push constant 20
+    push constant 90
+    push constant 230
+    call Screen.drawLine 4
+    pop temp 0
+    push constant 160
+    push constant 20
+    push constant 160
+    push constant 230
+    call Screen.drawLine 4
+    pop temp 0
+    push constant 20
+    push constant 90
+    push constant 230
+    push constant 90
+    call Screen.drawLine 4
+    pop temp 0
+    push constant 20
+    push constant 160
+    push constant 230
+    push constant 160
+    call Screen.drawLine 4
+    pop temp 0
+    push constant 2
+    push constant 40
+    call Output.moveCursor 2
+    pop temp 0
+    push constant 15
+    call String.new 1
+    push constant 84
+    call String.appendChar 2
+    push constant 105
+    call String.appendChar 2
+    push constant 99
+    call String.appendChar 2
+    push constant 107
+    call String.appendChar 2
+    push constant 44
+    call String.appendChar 2
+    push constant 32
+    call String.appendChar 2
+    push constant 116
+    call String.appendChar 2
+    push constant 97
+    call String.appendChar 2
+    push constant 99
+    call String.appendChar 2
+    push constant 107
+    call String.appendChar 2
+    push constant 44
+    call String.appendChar 2
+    push constant 32
+    call String.appendChar 2
+    push constant 116
+    call String.appendChar 2
+    push constant 111
+    call String.appendChar 2
+    push constant 101
+    call String.appendChar 2
+    call Output.printString 1
+    pop temp 0
+    push constant 6
+    push constant 32
+    call Output.moveCursor 2
+    pop temp 0
+    push constant 12
+    call String.new 1
+    push constant 72
+    call String.appendChar 2
+    push constant 111
+    call String.appendChar 2
+    push constant 119
+    call String.appendChar 2
+    push constant 32
+    call String.appendChar 2
+    push constant 116
+    call String.appendChar 2
+    push constant 111
+    call String.appendChar 2
+    push constant 32
+    call String.appendChar 2
+    push constant 112
+    call String.appendChar 2
+    push constant 108
+    call String.appendChar 2
+    push constant 97
+    call String.appendChar 2
+    push constant 121
+    call String.appendChar 2
+    push constant 46
+    call String.appendChar 2
+    call Output.printString 1
+    pop temp 0
+    push constant 7
+    push constant 32
+    call Output.moveCursor 2
+    pop temp 0
+    push constant 28
+    call String.new 1
+    push constant 85
+    call String.appendChar 2
+    push constant 115
+    call String.appendChar 2
+    push constant 101
+    call String.appendChar 2
+    push constant 32
+    call String.appendChar 2
+    push constant 49
+    call String.appendChar 2
+    push constant 32
+    call String.appendChar 2
+    push constant 116
+    call String.appendChar 2
+    push constant 111
+    call String.appendChar 2
+    push constant 32
+    call String.appendChar 2
+    push constant 57
+    call String.appendChar 2
+    push constant 32
+    call String.appendChar 2
+    push constant 116
+    call String.appendChar 2
+    push constant 111
+    call String.appendChar 2
+    push constant 32
+    call String.appendChar 2
+    push constant 115
+    call String.appendChar 2
+    push constant 101
+    call String.appendChar 2
+    push constant 108
+    call String.appendChar 2
+    push constant 101
+    call String.appendChar 2
+    push constant 99
+    call String.appendChar 2
+    push constant 116
+    call String.appendChar 2
+    push constant 32
+    call String.appendChar 2
+    push constant 97
+    call String.appendChar 2
+    push constant 32
+    call String.appendChar 2
+    push constant 99
+    call String.appendChar 2
+    push constant 101
+    call String.appendChar 2
+    push constant 108
+    call String.appendChar 2
+    push constant 108
+    call String.appendChar 2
+    push constant 46
+    call String.appendChar 2
+    call Output.printString 1
+    pop temp 0
+    push constant 0
+    return
+function Draw.playCross 0
+    push argument 0
+    pop pointer 0
+    push argument 1
+    push constant 1
+    eq
+    not
+    if-goto Draw_1
+    push pointer 0
+    push constant 1
+    push constant 3
+    call Draw.drawCross 3
+    pop temp 0
+    goto Draw_0
+label Draw_1
+label Draw_0
+    push argument 1
+    push constant 2
+    eq
+    not
+    if-goto Draw_3
+    push pointer 0
+    push constant 2
+    push constant 3
+    call Draw.drawCross 3
+    pop temp 0
+    goto Draw_2
+label Draw_3
+label Draw_2
+    push argument 1
+    push constant 3
+    eq
+    not
+    if-goto Draw_5
+    push pointer 0
+    push constant 3
+    push constant 3
+    call Draw.drawCross 3
+    pop temp 0
+    goto Draw_4
+label Draw_5
+label Draw_4
+    push argument 1
+    push constant 4
+    eq
+    not
+    if-goto Draw_7
+    push pointer 0
+    push constant 1
+    push constant 2
+    call Draw.drawCross 3
+    pop temp 0
+    goto Draw_6
+label Draw_7
+label Draw_6
+    push argument 1
+    push constant 5
+    eq
+    not
+    if-goto Draw_9
+    push pointer 0
+    push constant 2
+    push constant 2
+    call Draw.drawCross 3
+    pop temp 0
+    goto Draw_8
+label Draw_9
+label Draw_8
+    push argument 1
+    push constant 6
+    eq
+    not
+    if-goto Draw_11
+    push pointer 0
+    push constant 3
+    push constant 2
+    call Draw.drawCross 3
+    pop temp 0
+    goto Draw_10
+label Draw_11
+label Draw_10
+    push argument 1
+    push constant 7
+    eq
+    not
+    if-goto Draw_13
+    push pointer 0
+    push constant 1
+    push constant 1
+    call Draw.drawCross 3
+    pop temp 0
+    goto Draw_12
+label Draw_13
+label Draw_12
+    push argument 1
+    push constant 8
+    eq
+    not
+    if-goto Draw_15
+    push pointer 0
+    push constant 2
+    push constant 1
+    call Draw.drawCross 3
+    pop temp 0
+    goto Draw_14
+label Draw_15
+label Draw_14
+    push argument 1
+    push constant 9
+    eq
+    not
+    if-goto Draw_17
+    push pointer 0
+    push constant 3
+    push constant 1
+    call Draw.drawCross 3
+    pop temp 0
+    goto Draw_16
+label Draw_17
+label Draw_16
+    push constant 0
+    return
+function Draw.playCircle 0
+    push argument 0
+    pop pointer 0
+    push argument 1
+    push constant 1
+    eq
+    not
+    if-goto Draw_19
+    push pointer 0
+    push constant 1
+    push constant 3
+    call Draw.drawCircle 3
+    pop temp 0
+    goto Draw_18
+label Draw_19
+label Draw_18
+    push argument 1
+    push constant 2
+    eq
+    not
+    if-goto Draw_21
+    push pointer 0
+    push constant 2
+    push constant 3
+    call Draw.drawCircle 3
+    pop temp 0
+    goto Draw_20
+label Draw_21
+label Draw_20
+    push argument 1
+    push constant 3
+    eq
+    not
+    if-goto Draw_23
+    push pointer 0
+    push constant 3
+    push constant 3
+    call Draw.drawCircle 3
+    pop temp 0
+    goto Draw_22
+label Draw_23
+label Draw_22
+    push argument 1
+    push constant 4
+    eq
+    not
+    if-goto Draw_25
+    push pointer 0
+    push constant 1
+    push constant 2
+    call Draw.drawCircle 3
+    pop temp 0
+    goto Draw_24
+label Draw_25
+label Draw_24
+    push argument 1
+    push constant 5
+    eq
+    not
+    if-goto Draw_27
+    push pointer 0
+    push constant 2
+    push constant 2
+    call Draw.drawCircle 3
+    pop temp 0
+    goto Draw_26
+label Draw_27
+label Draw_26
+    push argument 1
+    push constant 6
+    eq
+    not
+    if-goto Draw_29
+    push pointer 0
+    push constant 3
+    push constant 2
+    call Draw.drawCircle 3
+    pop temp 0
+    goto Draw_28
+label Draw_29
+label Draw_28
+    push argument 1
+    push constant 7
+    eq
+    not
+    if-goto Draw_31
+    push pointer 0
+    push constant 1
+    push constant 1
+    call Draw.drawCircle 3
+    pop temp 0
+    goto Draw_30
+label Draw_31
+label Draw_30
+    push argument 1
+    push constant 8
+    eq
+    not
+    if-goto Draw_33
+    push pointer 0
+    push constant 2
+    push constant 1
+    call Draw.drawCircle 3
+    pop temp 0
+    goto Draw_32
+label Draw_33
+label Draw_32
+    push argument 1
+    push constant 9
+    eq
+    not
+    if-goto Draw_35
+    push pointer 0
+    push constant 3
+    push constant 1
+    call Draw.drawCircle 3
+    pop temp 0
+    goto Draw_34
+label Draw_35
+label Draw_34
+    push constant 0
+    return

@@ -1,0 +1,14 @@
+class Main {
+    function void main() {
+      var int mask;
+      let mask = 0;
+	    if (mask = 0) {
+    	    if (mask = 1) {
+            return 1;
+          } else {
+            return 2;
+          }
+    	}
+      return;
+    }
+}

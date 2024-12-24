@@ -1,0 +1,112 @@
+class Draw {
+  field int r;
+
+  constructor Draw new(int r) {
+    let r = r;
+    return this;
+  }
+
+  method void drawCross(int x, int y) {
+    var int xLen;
+    var int yLen;
+    let xLen = 70*(x-1);
+    let yLen = 70*(y-1);
+    do Screen.drawLine(20 + xLen, 20 + yLen, 90 + xLen, 90 + yLen);
+    do Screen.drawLine(90 + xLen, 20 + yLen, 20 + xLen, 90 + yLen);
+    return;
+  }
+
+  method void drawCircle(int x, int y) {
+    var int xLen;
+    var int yLen;
+    let xLen = 70*(x-1);
+    let yLen = 70*(y-1);
+    do Screen.drawCircle(55 + xLen, 55 + yLen, 35);
+    return;
+  }
+
+  method void dispose(){
+    do Memory.deAlloc(this);
+    return;
+  }
+
+  method void drawBoard(int location) {
+    do Screen.drawLine(20, 20, 20, 230);
+    do Screen.drawLine(20, 20, 230, 20);
+    do Screen.drawLine(230, 20, 230, 230);
+    do Screen.drawLine(20, 230, 230, 230);
+    do Screen.drawLine(90, 20, 90, 230); // vertical line 2
+    do Screen.drawLine(160, 20, 160, 230); // vertical line 3
+    do Screen.drawLine(20, 90, 230, 90); // horizontal line 2
+    do Screen.drawLine(20, 160, 230, 160); // horizontal line 3
+    do Output.moveCursor(2, 40);
+    do Output.printString("Tick, tack, toe");
+    do Output.moveCursor(6, 32);
+    do Output.printString("How to play.");
+    do Output.moveCursor(7, 32);
+    do Output.printString("Use 1 to 9 to select a cell.");
+    return;
+  }
+
+  method void playCross(int num) {
+    if (num = 1) {
+      do drawCross(1,3);
+    }
+    if (num = 2) {
+      do drawCross(2,3);
+    }
+    if (num = 3) {
+      do drawCross(3,3);
+    }
+    if (num = 4) {
+      do drawCross(1,2);
+    }
+    if (num = 5) {
+      do drawCross(2,2);
+    }
+    if (num = 6) {
+      do drawCross(3,2);
+    }
+    if (num = 7) {
+      do drawCross(1,1);
+    }
+    if (num = 8) {
+      do drawCross(2,1);
+    }
+    if (num = 9) {
+      do drawCross(3,1);
+    }
+    return;
+  }
+
+  method void playCircle(int num) {
+    if (num = 1) {
+      do drawCircle(1,3);
+    }
+    if (num = 2) {
+      do drawCircle(2,3);
+    }
+    if (num = 3) {
+      do drawCircle(3,3);
+    }
+    if (num = 4) {
+      do drawCircle(1,2);
+    }
+    if (num = 5) {
+      do drawCircle(2,2);
+    }
+    if (num = 6) {
+      do drawCircle(3,2);
+    }
+    if (num = 7) {
+      do drawCircle(1,1);
+    }
+    if (num = 8) {
+      do drawCircle(2,1);
+    }
+    if (num = 9) {
+      do drawCircle(3,1);
+    }
+    return;
+  }
+}
